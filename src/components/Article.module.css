@@ -1,0 +1,97 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 80%;
+    /*height: 400px;*/
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-radius: 15px 15px 0 0;
+
+    background: rgb(210, 210, 210);
+    /*background: linear-gradient(0deg, rgb(98, 132, 175) 0%, rgba(233,233,233,1) 100%, rgba(161,161,161,1) 100%);*/
+
+    padding-bottom: 25px;
+    padding-top: 25px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    transition: .7s;
+
+    text-decoration: none!important;
+    color: inherit!important;
+
+
+}
+
+.box:hover{
+    transition: .3s;
+    transform: scale(1.02);
+    box-shadow: 5px 5px 5px #194b5d;
+}
+.artImg{
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.artImg img{
+    width: 100%;
+    height: auto;
+}
+.artMain{
+    width: 65%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.header{
+    height: 10%;
+    width: 100%;
+}
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #194b5d;
+}
+.description{
+    width: 70%;
+    font-size: 14px;
+    color: #646464;
+}
+.blockToD{
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.date{
+    width: 20%;
+    padding: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #646464;
+}
+.content{
+    height: 90%;
+    width: 100%;
+}
+.contentText{
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
