@@ -1,0 +1,42 @@
+.wrapper{
+    width: 100%;
+    height: calc(100vh - 85px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image: url("../../assets/login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.loginFormBox{
+    width: 50%;
+    /*height: 70%;*/
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    padding: 15px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.title{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+
+    font-size: 28px;
+}
+.formGroup{
+    width: 100%;
+}
