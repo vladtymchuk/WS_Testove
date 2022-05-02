@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from "./Header.module.css"
-import {Button, Container, Nav, Navbar} from "react-bootstrap";
+import { Container, Nav, Navbar} from "react-bootstrap";
 import {LinkContainer} from 'react-router-bootstrap'
 import {useNavigate} from "react-router-dom";
 
@@ -10,12 +10,14 @@ const Header = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (localStorage.getItem("signIn") === "true") setHrefForLog('/profile')
+        if (localStorage.getItem("signIn") === "true") {
+            setHrefForLog('/profile')
+        }
         else {setHrefForLog("/login")}
     }, [localStorage.getItem("signIn")])
 
     const checkStatus = () => {
-        console.log("LST",localStorage.getItem("signIn") === "true")
+        // console.log("LST",localStorage.getItem("signIn") === "true")
         return navigate(hrefForLog)
     }
 

@@ -8,18 +8,18 @@ import {Spinner} from "react-bootstrap";
 export const  News = () => {
     const dispatch = useDispatch()
 
-    const userMail = useSelector(state => state.user.email)
+    // const userMail = useSelector(state => state.user.email)
 
     const loadNewsCallBack = useCallback(async () => await dispatch(loadNews()), [loadNews])
 
     useEffect(() => {
-        console.log(userMail)
+        // console.log(userMail)
         loadNewsCallBack()
     }, [loadNewsCallBack])
 
     const allNews = useSelector(state => state.news.allNews)
     const loader = useSelector(state => state.news.loading)
-    console.log(loader)
+    // console.log(loader)
 
     return (
         <div className={styles.box}>
