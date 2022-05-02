@@ -8,9 +8,12 @@ import {Spinner} from "react-bootstrap";
 export const  News = () => {
     const dispatch = useDispatch()
 
+    const userMail = useSelector(state => state.user.email)
+
     const loadNewsCallBack = useCallback(async () => await dispatch(loadNews()), [loadNews])
 
     useEffect(() => {
+        console.log(userMail)
         loadNewsCallBack()
     }, [loadNewsCallBack])
 

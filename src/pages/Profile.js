@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {setUserEmail, setUserPass} from "../store/actions/user";
 import {useNavigate} from "react-router-dom";
@@ -8,6 +8,11 @@ export const Profile = () => {
 
     const userMail = useSelector(state => state.user.email)
     const userPass = useSelector(state => state.user.pass)
+
+    useEffect(()=>{
+        console.log(userMail)
+        console.log(userPass)
+    }, [])
 
     const dispatch = useDispatch()
 
