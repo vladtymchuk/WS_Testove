@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {hideLoader, loadNews, showLoader} from "../store/actions/news";
+import { loadNews } from "../store/actions/news";
 import Article from "../components/Articicle";
 import styles from './styles/News.module.css'
 import {Spinner} from "react-bootstrap";
@@ -28,6 +28,7 @@ export const  News = () => {
                 />
                 : allNews.map(item => {
                 return <Article
+                    key={Date.now().toString()+item.publishedAt}
                     title={item.title}
                     description={item.description}
                     imgUrl={item.urlToImage}

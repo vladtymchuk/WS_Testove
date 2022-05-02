@@ -1,4 +1,4 @@
-import {allNewsActionCreator, hideLoaderAC, showLoaderAC} from "../reducers/news";
+import {allNewsActionCreator} from "../reducers/news";
 import {HIDE_LOADER, SHOW_LOADER} from "../types";
 
 const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=721b426f1adc4ebf85acadcd5f374017"

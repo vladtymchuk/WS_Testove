@@ -3,20 +3,23 @@ import styles from './Article.module.css'
 import {Figure} from "react-bootstrap"
 import img from "../assets/someImg.jpg"
 
-const Article = ({imgUrl, title, description, author, url, date, content}) => {
+const Article = ({imgUrl, title, author, url, date, content}) => {
     return (
-        <a key={Date.now().toString()}
+        <a
+            // key={keyId}
             href={url}
             className={styles.box}
             target="_blank" rel="noreferrer">
             <div className={styles.artImg}>
-                {imgUrl ? <img src={imgUrl} alt="articleImage"/>
-                : <Figure.Image
+                {
+                    imgUrl ? <img src={imgUrl} alt="articleImage"/>
+                    : <Figure.Image
                         width={"100%"}
                         height={"100%"}
                         alt="ARTICLE"
                         src={img}
-                    />}
+                    />
+                }
             </div>
             <div className={styles.artMain}>
                 <div className={styles.header}>
