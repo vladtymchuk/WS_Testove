@@ -9,7 +9,7 @@ const handlers = {
     [LOAD_NEWS]: (state, action) => ({...state, allNews: [...action.payload]}),
     [SHOW_LOADER]: state => ({...state, loading: true}),
     [HIDE_LOADER]: state => ({...state, loading: false}),
-    DEFAULT: state => state
+    DEFAULT: state => ({...state})
 }
 
 export const newsReducer = (state = initialState, action) => {

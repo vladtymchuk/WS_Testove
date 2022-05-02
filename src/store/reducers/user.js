@@ -8,7 +8,7 @@ const initialState = {
 const handlers = {
     [SET_USER_EMAIL]: (state, action) => ({...state, email: action.payload}),
     [SET_USER_PASS]: (state, action) => ({...state, pass: action.payload}),
-    DEFAULT: state => state
+    DEFAULT: state => ({...state})
 }
 
 export const userReducer = (state = initialState, action) => {

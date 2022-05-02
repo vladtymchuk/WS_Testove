@@ -16,11 +16,12 @@ function App() {
       <BrowserRouter>
           <main>
               <Header/>
+
               <Routes>
                   <Route index element={<Home />} />
-                  <Route path="/news" element={<News />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/profile" element={<Profile />} />
+                  <Route path="news" element={<News />} />
+                  <Route path="login" element={<Login />} />
+                  <Route path="profile" element={<Profile />} />
               </Routes>
           </main>
       </BrowserRouter>
