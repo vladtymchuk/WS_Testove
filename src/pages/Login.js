@@ -12,6 +12,10 @@ const Login = () => {
 
     const [regEmail, setRegEmail] = useState("")
     const [regPass, setRegPass] = useState("")
+
+    const [errorRegMail, setErrorRegMail] = useState(false)
+    const [errorRegPass, setErrorRegPass] = useState(false)
+
     const [email, setEmail] = useState("")
     const [pass, setPass] = useState("")
     const [show, setShow] = useState(false)
@@ -31,6 +35,8 @@ const Login = () => {
             localStorage.setItem("signIn", true.toString())
             return navigate("/profile")
         } catch (e) {
+            if (regEmail.indexOf("@") === -1) setErrorRegMail(true)
+            if (regPass.length < 5) setErrorRegPass(true)
             console.log(e.message)
         }
     }
@@ -63,10 +69,11 @@ const Login = () => {
                 <p className={styles.title}>Sign Up!</p>
                 <Form.Group as={Row} className={`mb-3 ${styles.formGroup}`} controlId="formPlaintextRegLogin">
                     <Form.Label column sm="2">
-                        <p style={{color: "#fff"}}>Login</p>
+                        <p style={{color: "#fff"}}>Email</p>
                     </Form.Label>
                     <Col sm="10">
                         <Form.Control
+                            isInvalid={errorRegMail}
                             type="text"
                             placeholder="Login"
                             value={regEmail}
@@ -80,6 +87,7 @@ const Login = () => {
                     </Form.Label>
                     <Col sm="10">
                         <Form.Control
+                            isInvalid={errorRegPass}
                             type="password"
                             placeholder="Password"
                             value={regPass}
@@ -99,7 +107,7 @@ const Login = () => {
                 <p className={styles.title}>Sign In!</p>
                 <Form.Group as={Row} className={`mb-3 ${styles.formGroup}`} controlId="formPlaintextLogin">
                     <Form.Label column sm="2">
-                        <p style={{color: "#fff"}}>Login</p>
+                        <p style={{color: "#fff"}}>Email</p>
                     </Form.Label>
                     <Col sm="10">
                         <Form.Control

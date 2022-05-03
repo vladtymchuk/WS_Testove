@@ -4,13 +4,16 @@ import { loadNews } from "../store/actions/news";
 import Article from "../components/Articicle";
 import styles from './styles/News.module.css'
 import {Spinner} from "react-bootstrap";
+import arrowUp from '../assets/up-arrow.png'
 
 export const  News = () => {
     const dispatch = useDispatch()
 
-    // const userMail = useSelector(state => state.user.email)
-
     const loadNewsCallBack = useCallback(async () => await dispatch(loadNews()), [loadNews])
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
 
     useEffect(() => {
         // console.log(userMail)
@@ -41,6 +44,11 @@ export const  News = () => {
                     url={item.url}
                 />
             })}
+            <div
+                onClick={scrollToTop}
+                className={styles.arrow}>
+                <img src={arrowUp} alt="arrow"/>
+            </div>
         </div>
     );
 };
